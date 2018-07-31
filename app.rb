@@ -30,10 +30,11 @@ get '/say/:word1/:word2/:word3/:word4/:word5' do
 end
 
 get '/:operation/:number1/:number2' do
-  @operation = [:operation]
-  @number1 = [:number1]
-  @number2 = [:number2]
-  if @operation = "+"
+  @operation = params[:operation]
+  @number1 = params[:number1].to_i
+  @number2 = params[:number2].to_i
+  if @operation == "multiply"
+    (@number1*@number2).to_s
     
     
 end
