@@ -39,12 +39,11 @@ get '/:operation/:number1/:number2' do
     (@number1 / @number2).to_s
   elsif @operation == "add"
     (@number1 + @number2).to_s
-  if @operation == "subtract"
+  elsif @operation == "subtract"
     (@number1 - @number2).to_s
   else
     "Cannot do this operation"
   end
-end
 end
     
 end
