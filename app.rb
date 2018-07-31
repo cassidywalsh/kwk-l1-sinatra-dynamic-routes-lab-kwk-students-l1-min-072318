@@ -35,6 +35,13 @@ get '/:operation/:number1/:number2' do
   @number2 = params[:number2].to_i
   if @operation == "multiply"
     (@number1*@number2).to_s
-    
+  elsif @operation == "divide"
+    (@number1/@number2).to_s
+  elsif @operation == "add"
+    (@number1+@number2).to_s
+  if @operation == "subtract"
+    (@number1-@number2).to_s
+  end
+end
     
 end
